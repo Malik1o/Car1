@@ -5,13 +5,12 @@ using UnityEngine;
 public class CarDriver : MonoBehaviour
 {
     public Transform wheel_front_right_transform;
-        public Transform wheel_front_left_transform;
-        public Transform wheel_back_right_transform;
-        public Transform wheel_back_left_transform;
-
+    public Transform wheel_front_left_transform;
+    public Transform wheel_back_right_transform;
+    public Transform wheel_back_left_transform;
 
     [Space(10)]
-   
+
 
     public WheelCollider wheel_front_right;
     public WheelCollider wheel_front_left;
@@ -64,7 +63,7 @@ public class CarDriver : MonoBehaviour
 
 
     }
-        
+
 
 
     private void DriveForward()
@@ -77,7 +76,7 @@ public class CarDriver : MonoBehaviour
         wheel_front_right.brakeTorque = 0;
         wheel_front_left.brakeTorque = 0;
         wheel_back_right.brakeTorque = 0;
-        wheel_front_left.brakeTorque = 0;
+        wheel_back_left.brakeTorque = 0;
 
 
     }
@@ -107,7 +106,7 @@ public class CarDriver : MonoBehaviour
         wheel_front_left.steerAngle = -30;
     }
 
-     private void ResetWheelRotation()
+    private void ResetWheelRotation()
     {
         wheel_front_right.steerAngle = 0;
         wheel_front_left.steerAngle = 0;
